@@ -1,0 +1,56 @@
+$grid-gutter-width: 32px;
+
+$primary: #1a99ce;
+$secondary: #1a1a1a;
+$tertiary: #dbedf4;
+$light: #f7faff;
+$dark: #3c3c3c;
+$black: #000;
+
+$success:                                                   #00c9a7;
+$info:                                                      #007bff;
+$warning:                                                   #ffc107;
+$danger:                                                    #dc3545;
+
+$body-color: #404140;
+$body-bg: #fff;
+
+$headings-color: #0f1f26;
+
+$text-muted: #767676;
+// $text-muted-2: #8C8D8C;
+
+$footer-color: #787878;
+
+$link-color: $primary;
+$link-hover-color: darken($link-color, 15%);
+
+$active-color: $primary;
+
+$theme-colors: () !default;
+$theme-colors: map-merge((
+  "black": $black,
+  "tertiary": $tertiary,
+), $theme-colors);
+
+$font-family-base: "Work Sans", sans-serif;
+
+$h1-font-size: 36px;
+$h2-font-size: 24px;
+$h3-font-size: 20px;
+$h4-font-size: 18px;
+$h5-font-size: 16px;
+$h6-font-size: 14px;
+
+$font-size-sm: 14px;
+
+$line-height-base: 1.6;
+
+$hr-border-color: #e7eaf3;
+
+$overlay-soft-bg-color: rgba($dark, .75);
+$modal-lg: 900px;
+
+$tooltip-bg: $dark;
+
+$btn-wide: 10rem;
