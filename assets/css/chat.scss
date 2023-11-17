@@ -1,0 +1,645 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,500,600,700&display=swap');
+
+/***NEwoptin**/
+.w-popup-optin {
+  position: fixed;
+  right: 20px;
+  bottom: 0;
+  font-family: 'Work Sans', sans-serif;
+}
+.w-optin-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 5px;
+  /*background:#404040;*/
+  border-radius: 7px;
+  color: #fff;
+  width: 57px;
+  height: 57px;
+  font-size: 32px;
+  text-align: center;
+  cursor: pointer;
+  /*border-radius:50%;*/
+}
+.w-optin-btn.circle i {
+  position: absolute;
+  top: 50%;
+  margin-top: -17px;
+  left: 50%;
+  margin-left: -12px;
+}
+.w-form-optin-box {
+  position: absolute;
+  bottom: 85px;
+  right: 0;
+  width: 350px;
+  max-height: 575px;
+  background-color: #f5f5f7;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  -ms-overflow-style: none;
+  overflow: auto;
+  color: #333;
+  padding: 0;
+  z-index: 999999999;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  height: 80vh;
+  border-radius: 0;
+}
+.w-custom-heading {
+  position: relative;
+  background-color: #053b59;
+  flex-direction: row;
+  align-items: center;
+  padding: 22px 20px 19px 8px;
+  margin-bottom: 0;
+  border-radius: 0;
+  text-align: center;
+  color: #fff;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 700;
+}
+.w-custom-heading img {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+/*****form-section****/
+.SendSmsPage__FormContainer {
+  flex-direction: column;
+  padding: 0;
+  flex: 1 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0;
+}
+
+.w-send-msg {
+  color: #5c5c5c;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  margin-left: 16px;
+  text-align: left;
+  background-color: #e4e9f0;
+  border-radius: 0;
+  padding: 15px 24px 16px 24px;
+  align-self: flex-start;
+  position: relative;
+  width: 85%;
+  animation: innerBubbleGrow 0.2s ease forwards 0s;
+  transform-origin: bottom left;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+.SendSmsPage__TextInvitation > div {
+  font-size: 14px;
+}
+.SendSmsPage__TextInvitation::after {
+  content: '';
+  z-index: -1;
+  left: 0;
+  bottom: 0;
+  background-color: #e4e9f0;
+  border-radius: 24px 24px 24px 3px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: outerBubbleGrow 0.4s ease forwards;
+  transform-origin: bottom left;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+.w-send-sms {
+  width: 84%;
+  opacity: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  background-color: #fff;
+  border-radius: 0;
+  margin: 0 16px 0 0;
+  padding: 16px 24px 40px 24px;
+  animation: innerBubbleGrow 0.2s ease forwards 0.2s;
+  transform-origin: bottom right;
+  z-index: 2;
+  float: right;
+  margin-bottom: 10px;
+}
+.w-send-sms::after {
+  content: '';
+  z-index: -1;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 0;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  animation: outerBubbleGrow 0.4s 0.2s ease forwards;
+  animation-direction: normal;
+  animation-direction: alternate;
+}
+
+.w-TextInput {
+  position: relative;
+  margin: 1rem 0;
+  opacity: 1;
+  animation: textFade 0.3s linear forwards 0.3s;
+}
+.w-TextInput input,
+.w-TextInput textarea {
+  resize: none;
+  font-family: Graphik, avenir next, avenir, Helvetica, sans-serif;
+  background: 0 0;
+  border: 0;
+  color: #333;
+  font-size: 16px;
+  /*height: 30px;*/
+  outline: 0;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  /*max-height: 76px;*/
+}
+.w-TextInput label {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 13px;
+  font-weight: 400;
+  left: 0;
+  line-height: 16px;
+  pointer-events: none;
+  position: absolute;
+  top: 0.5em;
+  transition: 0.2s ease;
+  white-space: nowrap;
+  z-index: 2;
+}
+
+.w-TextInput input:focus ~ .TextInput__Bar::after,
+.w-TextInput input:focus ~ .TextInput__Bar::before,
+.w-TextInput textarea:focus ~ .TextInput__Bar::after,
+.w-TextInput textarea:focus ~ .TextInput__Bar::before {
+  width: 50%;
+}
+
+.w-TextInput input:focus ~ label,
+.w-TextInput input:valid ~ label,
+.w-TextInput textarea:focus ~ label,
+.w-TextInput textarea:valid ~ label {
+  -webkit-transform: translate(-10%, -128%) scale(0.8);
+  -moz-transform: translate(-10%, -128%) scale(0.8);
+  -ms-transform: translate(-10%, -128%) scale(0.8);
+  -o-transform: translate(-10%, -128%) scale(0.8);
+  transform: translate(-10%, -128%) scale(0.8);
+  color: #ccc;
+}
+.w-TextInput input:focus ~ label,
+.w-TextInput textarea:focus ~ label {
+  color: #4c76e0;
+  -webkit-transform: translate(-10%, -128%) scale(0.8);
+  -moz-transform: translate(-10%, -128%) scale(0.8);
+  -ms-transform: translate(-10%, -128%) scale(0.8);
+  -o-transform: translate(-10%, -128%) scale(0.8);
+  transform: translate(-10%, -128%) scale(0.8);
+}
+.TextInput__Bar {
+  background-color: #ccc;
+  bottom: 0;
+  height: 1px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+}
+.TextInput__Bar::after,
+.TextInput__Bar::before {
+  background-color: #4c76e0;
+  content: '';
+  height: 2px;
+  position: absolute;
+  transition: 0.2s ease;
+  width: 0;
+}
+.TextInput__Bar::before {
+  left: 50%;
+}
+.TextInput__Bar::after {
+  right: 50%;
+}
+.SendSmsPage__ButtonFader {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
+  transition: opacity 0.2s 0.4s, transform 0.2s 0.4s, max-height 0s 0.6s, 0.4s;
+  padding-bottom: 12px;
+  max-height: 100%;
+}
+.w-error {
+  color: #e73e51;
+  font-weight: 600;
+  position: absolute;
+  bottom: 0.4em;
+  font-size: 12px;
+  right: 0;
+  z-index: 1;
+  background: #fff;
+  padding: 5px 0 5px 5px;
+}
+.w-legal {
+  text-align: left;
+  color: #adadad;
+  letter-spacing: 0.2px;
+  max-width: 82%;
+  margin: 0 auto;
+}
+.w-legal p {
+  line-height: 17px;
+  font-size: 10px;
+}
+.w-textright {
+  text-align: right;
+  padding: 0 15px;
+  margin: 15px 0;
+}
+.w-SendButton {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  position: relative;
+  cursor: pointer;
+  margin: 0 auto;
+  width: 93%;
+  height: 42px;
+  font-size: 16px;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 4px;
+  box-sizing: border-box;
+  outline: 0;
+  background-color: #4c76e0;
+  transition: width 0.3s, height 0.3s, color 0.3s, background-color 0.3s,
+    border-color 0.3s;
+  color: #fff;
+  border-color: #4c76e0;
+  opacity: 0.4;
+  font-weight: 700;
+}
+/*******Second-step****/
+.SubmittedMessage {
+  color: #444;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: left;
+  background-color: #dde6fd;
+  margin: 0 16px 0 0;
+  border-radius: 0;
+  position: relative;
+  padding: 16px 24px;
+  width: 70%;
+  animation: innerBubbleGrow 0.2s ease forwards;
+  transform-origin: bottom right;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  float: right;
+}
+.w-submit-title {
+  font-size: 12px;
+  margin-bottom: 4px;
+  text-align: left;
+  color: #ababab;
+}
+.w-recieved-icon {
+  display: flex;
+  align-self: flex-end;
+  width: 96px;
+  float: right;
+}
+.w-recieved-icon img {
+  height: 18px;
+  transform: translate(0, 6px);
+  margin-right: 5px;
+  margin-top: 4px;
+}
+.w-recieved-icon p {
+  font-weight: 600;
+  color: #000;
+  font-size: 12px;
+  margin-top: 4px;
+  font-family: 'Work Sans', sans-serif;
+}
+.w-sub-head {
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.w-ConfirmationMessage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ccc;
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+  background-color: #fff;
+  margin: 24px 0 0 16px;
+  border-radius: 0;
+  align-self: flex-start;
+  position: relative;
+  width: 85%;
+  height: 161px;
+  min-height: 160px;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  transform-origin: bottom left;
+  animation: fadeIn 0.25s ease;
+  opacity: 1;
+}
+.w-PhoneNumber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e4e9f0;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  color: #4b76e0;
+  width: 100%;
+  height: 35px;
+  padding: 10px 0;
+  border-radius: 0;
+  margin-bottom: 0;
+  flex-shrink: 0;
+  position: static;
+  top: 0;
+}
+.w-Message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  flex-grow: 1;
+}
+.w-confirm-title {
+  font-size: 13px;
+  font-weight: 600;
+  text-align: left;
+  color: #333;
+  margin-top: 10px;
+  margin-bottom: 7px;
+  padding: 0 15px;
+}
+.w-confirm-subtitle {
+  color: #404040;
+  font-size: 12px;
+  line-height: 1.33;
+  text-align: left;
+  width: 100%;
+  padding: 0 15px;
+  margin-bottom: 13px;
+}
+.w-confirm-subtitle p {
+  margin-top: 5px;
+  padding-top: 0;
+}
+
+.w-optin-btn {
+  background-image: url('../assets/images/chat-btn.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50px;
+}
+.red-box {
+  background-image: url('../assets/images/cancel.png') !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50px;
+}
+
+/*******prompt-box***/
+.w-prompt {
+  animation: fadeIn 0.25s ease;
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  margin: 16px;
+  width: 100%;
+  max-width: 317px;
+  padding-top: 20px;
+  position: fixed;
+  bottom: 70px;
+  right: 10px;
+}
+/*.w-prompt-button{
+    background-color: rgba(255,255,255,.9);
+    border-radius: 99999px;
+    border: none;
+    color: #ff0000;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 5px 15px;
+    margin-right: 3px;
+    margin-bottom: 4px;
+    opacity: 0;
+}*/
+.w-prompt-button {
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  margin-right: 3px;
+  margin-bottom: 4px;
+  opacity: 0;
+}
+.w-prompt:hover > .w-prompt-button {
+  animation: fadeIn ease;
+  opacity: 1;
+}
+.w-prompt-bubble {
+  border: 1px solid #f5f5f7;
+  box-shadow: 0 8px 20px 0 rgba(175, 175, 175, 0.24);
+  position: relative;
+  background: #fff;
+  border-radius: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: block;
+  flex-direction: row;
+  max-width: 290px;
+  padding: 20px;
+  width: 100%;
+  z-index: 99999;
+}
+.w-prompt-bubble:after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  bottom: -6px;
+  right: 18px;
+  background: #fff;
+  border-radius: 4px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.w-avatar {
+  padding-right: 12px;
+}
+.w-prompt-bubble .w-avatar {
+  margin: -50px 0 5px;
+  text-align: center;
+  padding-right: 0;
+}
+.w-avatar img {
+  width: 60px;
+  border-radius: 50%;
+  border: 0;
+}
+.w-prompt-copy {
+  font-size: 16px;
+  line-height: 20px;
+  max-width: initial;
+  text-align: center;
+}
+.w-chat-close {
+  display: none;
+}
+.w-chat-close a {
+  text-decoration: none;
+}
+.w-optin-btn-mobile {
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  cursor: pointer;
+  background-image: url('../assets/images/close-icon.png') !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 15px !important;
+}
+
+/********************PL***********************/
+
+.w-send-msg:before {
+  width: 0;
+  height: 0;
+  border-right: 10px solid #e4e9f0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  position: absolute;
+  left: -10px;
+  content: '';
+  top: 50%;
+  margin-top: -8px;
+}
+.w-send-sms:before {
+  width: 0;
+  height: 0;
+  border-left: 10px solid #ffffff;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  position: absolute;
+  right: -10px;
+  content: '';
+  bottom: 20px;
+  margin-top: -8px;
+}
+
+.SubmittedMessage:before {
+  width: 0;
+  height: 0;
+  border-left: 10px solid #dde6fd;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  position: absolute;
+  right: -10px;
+  content: '';
+  top: 50%;
+  margin-top: -8px;
+}
+.w-ConfirmationMessage:before {
+  width: 0;
+  height: 0;
+  border-right: 10px solid #ffffff;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  position: absolute;
+  left: -10px;
+  content: '';
+  top: 50%;
+  margin-top: -8px;
+}
+
+@media screen and (max-width: 769px) {
+  .SendSmsPage__FormContainer {
+    padding: 0 10px;
+  }
+}
+@media screen and (max-width: 490px) {
+  .w-popup-optin {
+    right: 0;
+  }
+
+  .w-optin-btn {
+    height: 45px;
+    width: 45px;
+    bottom: 10px;
+  }
+  .red-box {
+    background-size: 25px !important;
+  }
+  .w-optin-btn {
+    background-size: 45px;
+  }
+  .w-form-optin-box {
+    position: relative;
+    width: 100%;
+    top: 0;
+    height: 100vh;
+    overflow-x: hidden;
+  }
+
+  .w-prompt {
+    bottom: 40px;
+    right: -7px;
+  }
+  .w-chat-close {
+    display: block;
+  }
+  .w-prompt-button {
+    opacity: 1;
+  }
+}
